@@ -1,0 +1,167 @@
+#home{
+    header{
+        position: absolute;
+        top:0;
+        width:100%;
+        z-index:999;
+        transition:all ease .5s;
+        height:3.1875rem;
+        
+        .main-nav{
+            display:flex;
+            flex:1 1 100%;
+            flex-wrap:wrap;
+            align-items: center;
+            width:100%;
+            max-width:100%;
+            padding:.625rem 0;
+            position: relative;
+
+            .logo{
+                width:20%;
+                max-width:20%;
+                display:block;
+                position: relative;
+                color:$color-primary;
+
+                @media screen and(max-width:575.98px){
+                    width:100%;
+                    max-width:100%;
+                }
+                
+                h2{
+                    font-size:1.25rem;
+                    text-transform: uppercase;
+                    display:block;
+                    letter-spacing:.3px;
+                }
+            }
+
+            .social-media{
+                width:50%;
+                max-width:50%;
+                float:right;
+                display:block;
+                position: relative;
+
+                @media screen and(max-width:575.98px){
+                    display:none;
+                }
+
+                ul{
+                    li{
+                        display:inline-block;
+                        margin:0 .9375rem;
+
+                        a{
+                            i{
+                                color:$color-primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .my-toogle{
+                position: absolute;
+                right:1.25rem;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                z-index:999;
+                cursor: pointer;
+
+                span{
+
+                    i{
+                        color:$color-primary;
+                        font-size:1.5625rem;
+                    }
+                }
+            }
+        }
+    } 
+}
+ .my-menu{
+    position: fixed;
+    height:100%;
+    width:100%;
+    right:0;
+    top:0;
+    background:rgba($background-color, .6);
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transition:all ease-in-out .5s;
+    -webkit-transition: all ease-in-out .5s;
+    will-change: transform;
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        -webkit-transform:translateX(0);
+    }
+
+    .menu-box{
+        position: absolute;
+        height:100%;
+        width:30%;
+        right:0;
+        top:0;
+        background:$background-color;
+        box-shadow: 0 0 25px rgba(0,0,0,.07);
+        padding:1.875rem 2.5rem;
+        z-index:999;
+
+        @media screen and(max-width:575.98px){
+            width:100%;
+        }
+
+        @media (min-width:576px) and (max-width:767.98px){
+            width:60%;
+        }
+
+        @media (min-width:768px) and (max-width:1199.98px){
+            width:40%;
+        }
+
+        span{
+            display: block;
+            margin:1.25rem 0;
+            position: relative;
+            float:right;
+            top:-1.5rem;
+            cursor: pointer;
+
+            i{
+                color:$color-primary;
+                font-size:1.5625rem;
+            }
+
+        }
+
+        ul{
+            margin:2.5rem 0;
+            li{
+                display:block;
+                margin:.625rem 0;
+                padding:.625rem;
+                font-size:1.125rem;
+                text-transform: uppercase;
+                font-weight:600;
+                
+                a{
+                    color:$color-primary;
+                    display: inline-block;
+                    transition:all ease .4s;
+
+                    &:hover{
+                        color:$icons-color;
+                    }
+                }
+            }
+        }
+    }
+}

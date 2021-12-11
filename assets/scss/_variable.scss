@@ -1,0 +1,11 @@
+$color-primary:#fff;
+$text-primary:#9e9e9e;
+$icons-color:#E31C25;
+$background-color:#000;
+
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap);
+
+@mixin button-color{
+    background: rgb(251,66,30);
+    background: linear-gradient(180deg, rgba(251,66,30,1) 45%, rgba(227,28,37,1) 87%);
+}
